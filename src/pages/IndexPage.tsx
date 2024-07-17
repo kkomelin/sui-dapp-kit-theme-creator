@@ -1,11 +1,17 @@
-import { ConnectButton } from "@mysten/dapp-kit";
+import { ConnectButton } from '@mysten/dapp-kit'
+import Layout from '~~/components/Layout'
+import ThemeSwitcher from '~~/components/ThemeSwitcher'
 
 const IndexPage = () => {
   return (
-    <>
+    <Layout>
       <ConnectButton />
-    </>
-  );
-};
 
-export default IndexPage;
+      <div>
+        <ThemeSwitcher />
+      </div>
+    </Layout>
+  )
+}
+
+export default IndexPage
