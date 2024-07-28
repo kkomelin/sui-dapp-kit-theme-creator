@@ -1,14 +1,12 @@
-import {
-  createNetworkConfig,
-  SuiClientProvider,
-  WalletProvider,
-} from '@mysten/dapp-kit'
+import { createNetworkConfig, SuiClientProvider } from '@mysten/dapp-kit'
 import '@mysten/dapp-kit/dist/index.css'
 import { getFullnodeUrl } from '@mysten/sui/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
-import { getThemes } from './helpers/theme'
 import IndexPage from './pages/IndexPage'
+import { SettingsStoreProvider } from './providers/SettingsStoreProvider'
+import { ThemedWalletProvider } from './providers/ThemedWalletProvider'
 import ThemeProvider from './providers/ThemeProvider'
+import SettingsStore from './store/SettingsStore'
 
 // Config options for the networks you want to connect to
 const { networkConfig } = createNetworkConfig({
@@ -18,33 +16,18 @@ const { networkConfig } = createNetworkConfig({
 
 const queryClient = new QueryClient()
 
-const { lightTheme, darkTheme } = getThemes('#F6F7F9', '#011631')
+const initialSettings = new SettingsStore()
 
 const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <SuiClientProvider networks={networkConfig} defaultNetwork="localnet">
         <ThemeProvider>
-          <WalletProvider
-            theme={[
-              {
-                // Default to light theme.
-                variables: lightTheme,
-              },
-              {
-                // React to the color scheme media query.
-                mediaQuery: '(prefers-color-scheme: dark)',
-                variables: darkTheme,
-              },
-              {
-                // Reacts to the dark class.
-                selector: '.dark',
-                variables: darkTheme,
-              },
-            ]}
-          >
-            <IndexPage />
-          </WalletProvider>
+          <SettingsStoreProvider value={initialSettings}>
+            <ThemedWalletProvider>
+              <IndexPage />
+            </ThemedWalletProvider>
+          </SettingsStoreProvider>
         </ThemeProvider>
       </SuiClientProvider>
     </QueryClientProvider>
