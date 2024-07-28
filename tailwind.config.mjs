@@ -5,8 +5,8 @@ export default {
   theme: {
     extend: {
       colors: {
-        white: '#ffffff',
-        black: '#000000',
+        light: 'var(--sdktg-color-light)',
+        dark: 'var(--sdktg-color-dark)',
       },
     },
   },

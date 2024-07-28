@@ -1,12 +1,12 @@
 import {
   createNetworkConfig,
-  lightTheme,
   SuiClientProvider,
   WalletProvider,
 } from '@mysten/dapp-kit'
 import '@mysten/dapp-kit/dist/index.css'
 import { getFullnodeUrl } from '@mysten/sui/client'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+import { getThemes } from './helpers/theme'
 import IndexPage from './pages/IndexPage'
 import ThemeProvider from './providers/ThemeProvider'
 
@@ -18,7 +18,7 @@ const { networkConfig } = createNetworkConfig({
 
 const queryClient = new QueryClient()
 
-const darkTheme = lightTheme
+const { lightTheme, darkTheme } = getThemes('#F6F7F9', '#011631')
 
 const App = () => {
   return (

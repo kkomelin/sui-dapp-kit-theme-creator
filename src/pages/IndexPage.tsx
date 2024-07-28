@@ -5,6 +5,7 @@ import ThemeSwitcher from '~~/components/ThemeSwitcher'
 const IndexPage = () => {
   return (
     <Layout>
+      
       <ConnectButton />
 
       <div>

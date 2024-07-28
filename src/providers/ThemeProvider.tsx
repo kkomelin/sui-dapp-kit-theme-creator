@@ -5,7 +5,7 @@ import { FC, PropsWithChildren } from 'react'
 
 const ThemeProvider: FC<PropsWithChildren> = ({ children }) => {
   return (
-    <Theme className="w-full bg-white text-black dark:bg-black dark:text-white">
+    <Theme className="w-full bg-light text-dark dark:bg-dark dark:text-light">
       {children}
     </Theme>
   )
