@@ -22,14 +22,21 @@ const ThemeSwitcher = () => {
   }
 
   return (
-    <Toggle.Root aria-label="Toggle theme" onPressedChange={toggleTheme}>
-      <Badge className="rounded-full p-2 shadow" highContrast={true}>
-        {theme === 'dark' ? (
-          <SunIcon className="h-5 w-5" />
-        ) : (
-          <MoonIcon className="h-5 w-5" />
-        )}
-      </Badge>
+    <Toggle.Root
+      aria-label="Toggle theme"
+      onPressedChange={toggleTheme}
+      className="rounded border border-gray-300 px-2 py-1 text-sm rounded-br-none rounded-tl-none border-b-0"
+    >
+      <div className="flex flex-row items-center justify-center gap-1">
+        <Badge highContrast={true}>
+          {theme === 'dark' ? (
+            <SunIcon className="h-5 w-5" />
+          ) : (
+            <MoonIcon className="h-5 w-5" />
+          )}
+        </Badge>
+        Test in {theme === 'dark' ? 'Light' : 'Dark'} mode
+      </div>
     </Toggle.Root>
   )
 }
