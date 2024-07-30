@@ -25,11 +25,6 @@ export const ThemedWalletProvider: FC<PropsWithChildren> = observer(
             variables: lightTheme,
           },
           {
-            // React to the color scheme media query.
-            mediaQuery: '(prefers-color-scheme: dark)',
-            variables: darkTheme,
-          },
-          {
             // Reacts to the dark class.
             selector: '.dark',
             variables: darkTheme,
