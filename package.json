@@ -1,7 +1,7 @@
 {
-  "name": "sui-dapp-kit-theme-generator",
-  "description": "Generates Sui dApp Kit Themes Based on Your Color Scheme",
-  "version": "0.0.0",
+  "name": "sui-dapp-kit-theme-creator",
+  "description": "Turns two colors into balanced Sui dApp Kit themes",
+  "version": "0.1.0",
   "license": "MIT",
   "type": "module",
   "scripts": {
@@ -49,14 +49,16 @@
     "typescript": "^5.5.3",
     "vite": "^5.3.4"
   },
-  "repository": "kkomelin/sui-dapp-kit-theme-generator",
+  "repository": "kkomelin/sui-dapp-kit-theme-creator",
   "bugs": {
-    "url": "https://github.com/kkomelin/sui-dapp-kit-theme-generator/issues"
+    "url": "https://github.com/kkomelin/sui-dapp-kit-theme-creator/issues"
   },
   "keywords": [
     "sui",
     "sui-dapp-kit-theme-generator",
+    "sui-dapp-kit-theme-creator",
     "sui-dapp-kit",
-    "theme-generator"
+    "theme-generator",
+    "theme-creator"
   ]
 }

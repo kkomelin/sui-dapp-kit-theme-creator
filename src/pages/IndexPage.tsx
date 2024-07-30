@@ -3,10 +3,10 @@ import { Button } from '@radix-ui/themes'
 import { CheckIcon, CopyIcon } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useEffect, useState } from 'react'
-import { BlockPicker } from 'react-color'
+import { ChromePicker } from 'react-color'
 import Layout from '~~/components/Layout'
 import ThemeSwitcher from '~~/components/ThemeSwitcher'
-import { generateCode } from '~~/helpers/code'
+import { generateThemeCode } from '~~/helpers/code'
 import { getThemes } from '~~/helpers/theme'
 import { useSettingsStore } from '~~/hooks/useSettingsStore'
 
@@ -38,64 +38,87 @@ const IndexPage = observer(() => {
 
   useEffect(() => {
     const themes = getThemes(lightColor, darkColor)
-    setCode(generateCode(themes))
+    setCode(generateThemeCode(themes))
   }, [lightColor, darkColor])
 
   return (
     <Layout>
-      <h1 className="mt-10 p-4 text-3xl font-bold">
-        Sui dApp Kit Theme Generator
+      <h1 className="mt-2 md:mt-6 px-4 py-4 text-center text-4xl font-medium">
+        {import.meta.env.VITE_APP_NAME}
       </h1>
+      <h2 className='text-2xl font-medium1 opacity-80'>2 colors -&gt; 2 themes</h2>
 
-      <div className="my-6 flex grow flex-col items-center justify-center gap-8">
-        <h2 className="p-2 text-xl font-bold">Choose your primary colors</h2>
+      <div className="my-6 flex grow flex-col items-center justify-center gap-8 px-4">
+        <div className="mt-5 flex flex-col items-center justify-center">
+          <h3 className="mb-5 p-2 text-center text-2xl font-medium">
+            Choose colors
+          </h3>
 
-        <div className="flex flex-row items-center justify-center gap-5">
-          <div className="flex flex-col items-center justify-center gap-4">
-            <div>Light</div>
-            <BlockPicker
-              color={lightColor}
-              onChangeComplete={handleLightColorChange}
-            />
-          </div>
-          <div className="flex flex-col items-center justify-center gap-4">
-            <div>Dark</div>
-            <BlockPicker
-              color={darkColor}
-              onChangeComplete={handleDarkColorChange}
-            />
-          </div>
-        </div>
-
-        <h2 className="mt-4 p-2 text-xl font-bold">Test your themes</h2>
-
-        <div className="flex flex-row items-center justify-start gap-3">
-          <div className="relative flex h-full w-1/2 grow flex-col items-center justify-center border border-gray-300">
-            <ConnectButton />
-
-            <div className="absolute bottom-0 left-0">
-              <ThemeSwitcher />
+          <div className="flex flex-col items-center justify-center gap-8 md:flex-row">
+            <div className="flex flex-col items-center justify-center gap-4">
+              <div>Light mode</div>
+              <ChromePicker
+                color={lightColor}
+                onChangeComplete={handleLightColorChange}
+                disableAlpha={true}
+              />
+            </div>
+            <div className="flex flex-col items-center justify-center gap-4">
+              <div>Dark mode</div>
+              <ChromePicker
+                color={darkColor}
+                onChangeComplete={handleDarkColorChange}
+                disableAlpha={true}
+              />
             </div>
           </div>
-          <div className="flex h-full max-h-80 w-1/2 flex-col items-start justify-start overflow-scroll border border-gray-300 p-3 text-sm">
-            <pre>
-              <code>{code}</code>
-            </pre>
-          </div>
         </div>
 
-        <Button
-          variant="classic"
-          className="flex flex-row items-center justify-center gap-2"
-          onClick={() => copyToClipboard()}
-        >
-          {copied ? (
-            <CheckIcon className="h-5 w-5 text-green-300" />
-          ) : (
-            <CopyIcon className="h-5 w-5" />
-          )}{' '}
-          Copy code
-        </Button>
+        <div className="mt-5 flex flex-col items-center justify-center">
+          <h3 className="mb-5 p-2 text-center text-2xl font-medium">
+            Get the themes
+          </h3>
+
+          <div className="flex flex-col items-center justify-start gap-8 md:flex-row">
+            <div className="relative flex h-80 w-full grow flex-col items-center justify-center rounded border border-gray-300 md:w-1/2">
+              <ConnectButton />
+
+              <div className="absolute bottom-0 left-0">
+                <ThemeSwitcher />
+              </div>
+            </div>
+            <div className="flex h-80 w-full flex-col items-start justify-start overflow-auto rounded border border-gray-300 p-3 text-sm md:w-1/2">
+              <pre className="whitespace-pre-wrap md:whitespace-pre">
+                <code>{code}</code>
+              </pre>
+            </div>
+          </div>
+
+          <Button
+            variant="classic"
+            className="mt-5 flex flex-row items-center justify-center gap-2"
+            onClick={() => copyToClipboard()}
+          >
+            {copied ? (
+              <CheckIcon className="h-5 w-5 text-green-600 dark:text-green-300" />
+            ) : (
+              <CopyIcon className="h-5 w-5" />
+            )}{' '}
+            Copy code
+          </Button>
+        </div>
+
+        <div className="px-4 text-center font-medium">
+          To install the generated theme, follow{' '}
+          <a
+            className="text-green-600 dark:text-green-300"
+            href="https://sdk.mystenlabs.com/dapp-kit/themes"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            the official guide
+          </a>
+        </div>
       </div>
     </Layout>
   )

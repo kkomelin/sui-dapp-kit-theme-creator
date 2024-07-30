@@ -25,7 +25,7 @@ const ThemeSwitcher = () => {
     <Toggle.Root
       aria-label="Toggle theme"
       onPressedChange={toggleTheme}
-      className="rounded border border-gray-300 px-2 py-1 text-sm rounded-br-none rounded-tl-none border-b-0"
+      className="rounded border border-gray-300 px-2 py-1 text-sm rounded-br-none rounded-tl-none border-b-0 border-l-0"
     >
       <div className="flex flex-row items-center justify-center gap-1">
         <Badge highContrast={true}>

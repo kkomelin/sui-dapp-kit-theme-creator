@@ -1,6 +1,6 @@
-# sui-dapp-kit-theme-generator
+# Sui dApp Kit Theme Creator
 
-Generates Sui dApp Kit Themes Based on Your Color Scheme
+Turns two colors into balanced Sui dApp Kit themes (light and dark).
 
 ## Links
 
