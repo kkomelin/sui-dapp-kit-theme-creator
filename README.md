@@ -1,6 +1,6 @@
 # Sui dApp Kit Theme Creator
 
-Turns two colors into balanced Sui dApp Kit themes (light and dark).
+You choose two colors, the app creates two balanced Sui dApp Kit themes (light and dark).
 
 ## Links
 

@@ -1,6 +1,6 @@
 import { ConnectButton } from '@mysten/dapp-kit'
 import { Button } from '@radix-ui/themes'
-import { CheckIcon, CopyIcon } from 'lucide-react'
+import { CheckIcon, CopyIcon, HeartIcon } from 'lucide-react'
 import { observer } from 'mobx-react-lite'
 import { useEffect, useState } from 'react'
 import { ChromePicker } from 'react-color'
@@ -43,10 +43,12 @@ const IndexPage = observer(() => {
 
   return (
     <Layout>
-      <h1 className="mt-2 md:mt-6 px-4 py-4 text-center text-4xl font-medium">
+      <h1 className="mt-2 px-4 py-4 text-center text-4xl font-medium md:mt-6">
         {import.meta.env.VITE_APP_NAME}
       </h1>
-      <h2 className='text-2xl font-medium1 opacity-80'>2 colors -&gt; 2 themes</h2>
+      <h2 className="font-medium1 text-2xl opacity-70">
+        choose 2 colors, get 2 themes
+      </h2>
 
       <div className="my-6 flex grow flex-col items-center justify-center gap-8 px-4">
         <div className="mt-5 flex flex-col items-center justify-center">
@@ -76,7 +78,7 @@ const IndexPage = observer(() => {
 
         <div className="mt-5 flex flex-col items-center justify-center">
           <h3 className="mb-5 p-2 text-center text-2xl font-medium">
-            Get the themes
+            Get themes
           </h3>
 
           <div className="flex flex-col items-center justify-start gap-8 md:flex-row">
@@ -108,17 +110,39 @@ const IndexPage = observer(() => {
           </Button>
         </div>
 
-        <div className="px-4 text-center font-medium">
-          To install the generated theme, follow{' '}
+        <div className="my-5 p-2 text-center text-2xl font-medium">
           <a
-            className="text-green-600 dark:text-green-300"
+            className="text-green-600 dark:text-green-300 border border-green-600 dark:border-green-300 px-4 py-2 rounded"
             href="https://sdk.mystenlabs.com/dapp-kit/themes"
             target="_blank"
             rel="noopener noreferrer"
           >
-            the official guide
+            Install themes
           </a>
         </div>
+      </div>
+
+      <div className="mt-5 flex flex-row items-center justify-center gap-1">
+        <span>Built with</span>
+        <HeartIcon className="h-4 w-4" />
+        <span>by</span>
+        <a
+          href="https://github.com/kkomelin"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-600 dark:text-green-300"
+        >
+          @kkomelin
+        </a>
+        <span>·</span>
+        <a
+          href="https://github.com/kkomelin/sui-dapp-kit-theme-creator/issues/new"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-green-600 dark:text-green-300"
+        >
+          Support
+        </a>
       </div>
     </Layout>
   )
