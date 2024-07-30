@@ -1,6 +1,6 @@
 {
   "name": "sui-dapp-kit-theme-creator",
-  "description": "Turns two colors into balanced Sui dApp Kit themes",
+  "description": "Turns two colors into Sui dApp Kit themes",
   "version": "0.1.0",
   "license": "MIT",
   "type": "module",
