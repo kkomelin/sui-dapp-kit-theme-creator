@@ -26,3 +26,9 @@ body, #root {
   min-width: 100%;
   min-height: 100vh;
 }
+
+// Fixes the issue with invisible input value caused by the system dark theme enabled.
+// @todo: Report this issue to react-color.
+.chrome-picker input {
+  background-color: var(--sdktg-color-light);
+}
