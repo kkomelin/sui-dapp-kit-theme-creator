@@ -9,7 +9,8 @@
     "build": "tsc -b && vite build",
     "lint": "eslint . --ext ts,tsx --report-unused-disable-directives --max-warnings 0",
     "preview": "vite preview",
-    "format": "prettier --write './index.html' './src/**/*.{js,jsx,ts,tsx}'"
+    "format": "prettier --write './index.html' './src/**/*.{js,jsx,ts,tsx}'",
+    "deploy": "firebase deploy"
   },
   "dependencies": {
     "@mysten/dapp-kit": "^0.14.12",
