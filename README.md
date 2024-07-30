@@ -2,6 +2,8 @@
 
 You choose two colors, the app creates two balanced Sui dApp Kit themes (light and dark).
 
+![sui-dapp-kit-theme-creator](https://github.com/user-attachments/assets/7f69b431-433d-44cb-a066-835bace52b56)
+
 ## Links
 
 - [Sui dApp Kit Themes](https://sdk.mystenlabs.com/dapp-kit/themes)
