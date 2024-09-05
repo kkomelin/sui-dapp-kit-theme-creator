@@ -43,6 +43,16 @@ const IndexPage = observer(() => {
 
   return (
     <Layout>
+      <div className="-mr-5 mb-0 mt-6 flex flex-col items-center justify-center">
+        <iframe
+          className="overflow-hidden border-none"
+          src="https://ghbtns.com/github-btn.html?user=kkomelin&repo=sui-dapp-kit-theme-creator&type=star&count=true&size=large"
+          width="140"
+          height="30"
+          title="Star on Github"
+        ></iframe>
+      </div>
+
       <h1 className="mt-2 px-4 py-4 text-center text-4xl font-medium md:mt-6">
         {import.meta.env.VITE_APP_NAME}
       </h1>
