@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@mysten/dapp-kit':
-        specifier: ^0.14.18
-        version: 0.14.18(@tanstack/react-query@5.54.1(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
+        specifier: ^0.14.19
+        version: 0.14.19(@tanstack/react-query@5.54.1(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)
       '@mysten/sui':
         specifier: ^1.8.0
         version: 1.8.0(typescript@5.5.4)
@@ -378,8 +378,8 @@ packages:
   '@mysten/bcs@1.0.4':
     resolution: {integrity: sha512-6JoQi59GN/dVEBCNq8Rj4uOR0niDrJqDx/2gNQWXANwJakHIGH0AMniHrXP41B2dF+mZ3HVmh9Hi3otiEVQTrQ==}
 
-  '@mysten/dapp-kit@0.14.18':
-    resolution: {integrity: sha512-r83LEEslaAWKFPcL+FC4SbnY6GktKPUeUady1Y1/um7+J0A06o1189A4FIkcwGm54O2QXsVmpYHxpTd4+NizVw==}
+  '@mysten/dapp-kit@0.14.19':
+    resolution: {integrity: sha512-gypd+OJv7+4qs8afbWZfHFaOj8k9b/l72WSG+y0wc3Rkf0YbE26qNQGGBBmklArKC7Hm/UJtA70NmGYx4z0XMg==}
     peerDependencies:
       '@tanstack/react-query': ^5.0.0
       react: '*'
@@ -391,8 +391,8 @@ packages:
   '@mysten/wallet-standard@0.13.3':
     resolution: {integrity: sha512-aLxhLIM6uzsfBZ5HbOLrvw1WrzHGPzysUmiFrXRizNpclz2DqxeqngDiDq8VogKM2bXCjhF0SxSc+Bj+relp7w==}
 
-  '@mysten/zksend@0.11.0':
-    resolution: {integrity: sha512-Q44ljYpH2Om8kOu/P+gxhZjFh8HgGXM3fdvpv3u0Fh+IbZW0ypv6G2RGDwldWBXY+pYO4xVpxres8QfC4CzALQ==}
+  '@mysten/zksend@0.11.1':
+    resolution: {integrity: sha512-T2FkQ9FdXa4akfETgJeb55T8zYo57qa3o+PEALnGqa6hx5rRqmiWZtUULAi1G6XWlpWXXaOFiRElHB41o+pdDw==}
 
   '@noble/curves@1.6.0':
     resolution: {integrity: sha512-TlaHRXDehJuRNR9TfZDNQ45mMEd5dwUwmicsafcIX4SsNiqnCHKjE/1alYPd/lDRVhxdhUAlv8uEhMCI5zjIJQ==}
@@ -2692,11 +2692,11 @@ snapshots:
     dependencies:
       bs58: 6.0.0
 
-  '@mysten/dapp-kit@0.14.18(@tanstack/react-query@5.54.1(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)':
+  '@mysten/dapp-kit@0.14.19(@tanstack/react-query@5.54.1(react@18.3.1))(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)(typescript@5.5.4)':
     dependencies:
       '@mysten/sui': 1.8.0(typescript@5.5.4)
       '@mysten/wallet-standard': 0.13.3(typescript@5.5.4)
-      '@mysten/zksend': 0.11.0(typescript@5.5.4)
+      '@mysten/zksend': 0.11.1(typescript@5.5.4)
       '@radix-ui/react-dialog': 1.1.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-dropdown-menu': 2.1.1(@types/react-dom@18.3.0)(@types/react@18.3.5)(react-dom@18.3.1(react@18.3.1))(react@18.3.1)
       '@radix-ui/react-slot': 1.1.0(@types/react@18.3.5)(react@18.3.1)
@@ -2745,7 +2745,7 @@ snapshots:
       - '@gql.tada/vue-support'
       - typescript
 
-  '@mysten/zksend@0.11.0(typescript@5.5.4)':
+  '@mysten/zksend@0.11.1(typescript@5.5.4)':
     dependencies:
       '@mysten/sui': 1.8.0(typescript@5.5.4)
       '@mysten/wallet-standard': 0.13.3(typescript@5.5.4)
