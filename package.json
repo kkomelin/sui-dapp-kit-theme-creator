@@ -13,7 +13,7 @@
     "deploy": "firebase deploy"
   },
   "dependencies": {
-    "@mysten/dapp-kit": "^0.14.18",
+    "@mysten/dapp-kit": "^0.14.21",
     "@mysten/sui": "^1.8.0",
     "@radix-ui/react-toggle": "^1.1.0",
     "@radix-ui/themes": "^3.1.3",
